@@ -48,17 +48,20 @@ INCLUDES += -I/usr/local/include
 
 # These are the default libraries needed, but they can be added to or
 # overridden by the platform-specific settings in target makefiles.
+ifneq ($(TARGET),wasm)
 LIBS := \
 -lstdc++ \
 -lpthread \
 -lm \
 -lz \
 -ldl
+endif
 
 # There are no rules for compiling objects for the host system (since we don't
 # generate things like the protobuf compiler that require that), so all of
 # these settings are for the target compiler.
-CFLAGS := -O3 -DNDEBUG -fPIC $(EXTRA_CFLAGS)
+# CFLAGS := -O3 -DNDEBUG -fPIC -s ASSERTIONS=1 $(EXTRA_CFLAGS) 
+CFLAGS := -O3 -g -fPIC -s ASSERTIONS=1 --pre-js /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/pre.js $(EXTRA_CFLAGS) 
 CXXFLAGS := $(CFLAGS) --std=c++11 $(EXTRA_CXXFLAGS)
 LDOPTS := -L/usr/local/lib
 ARFLAGS := -r
@@ -90,8 +93,13 @@ LIB_NAME := libtensorflow-lite.a
 
 # Benchmark static library and binary
 BENCHMARK_LIB_NAME := benchmark-lib.a
+ifeq ($(TARGET),wasm)
+BENCHMARK_BINARY_NAME := benchmark_model.js
+BENCHMARK_PERF_OPTIONS_BINARY_NAME := benchmark_model_performance_options.js
+else
 BENCHMARK_BINARY_NAME := benchmark_model
 BENCHMARK_PERF_OPTIONS_BINARY_NAME := benchmark_model_performance_options
+endif
 
 # A small example program that shows how to link against the library.
 MINIMAL_SRCS := \
@@ -279,9 +287,15 @@ BENCHMARK_PERF_OPTIONS_BINARY := $(BINDIR)$(BENCHMARK_PERF_OPTIONS_BINARY_NAME)
 MINIMAL_BINARY := $(BINDIR)minimal
 LABEL_IMAGE_BINARY := $(BINDIR)label_image
 
+ifeq ($(TARGET),wasm)
+CXX := em++
+CC := emcc
+AR := emar
+else
 CXX := $(CC_PREFIX)${TARGET_TOOLCHAIN_PREFIX}g++
 CC := $(CC_PREFIX)${TARGET_TOOLCHAIN_PREFIX}gcc
 AR := $(CC_PREFIX)${TARGET_TOOLCHAIN_PREFIX}ar
+endif # ifeq ($(TARGET),wasm)
 
 MINIMAL_OBJS := $(addprefix $(OBJDIR), \
 $(patsubst %.cc,%.o,$(patsubst %.c,%.o,$(MINIMAL_SRCS))))
