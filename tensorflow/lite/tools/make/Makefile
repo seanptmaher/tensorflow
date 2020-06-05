@@ -48,6 +48,8 @@ INCLUDES += -I/usr/local/include
 
 # These are the default libraries needed, but they can be added to or
 # overridden by the platform-specific settings in target makefiles.
+# emscripten doesn't require us to refer to them, so we don't link 
+# to them when compiling for wasm.
 ifneq ($(TARGET),wasm)
 LIBS := \
 -lstdc++ \
@@ -57,11 +59,15 @@ LIBS := \
 -ldl
 endif
 
+
 # There are no rules for compiling objects for the host system (since we don't
 # generate things like the protobuf compiler that require that), so all of
 # these settings are for the target compiler.
-# CFLAGS := -O3 -DNDEBUG -fPIC -s ASSERTIONS=1 $(EXTRA_CFLAGS) 
-CFLAGS := -O3 -g -fPIC -s ASSERTIONS=1 --pre-js /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/pre.js $(EXTRA_CFLAGS) 
+CFLAGS := -O3 -DNDEBUG -fPIC $(EXTRA_CFLAGS) 
+# CFLAGS := -O3 -g -fPIC -s ASSERTIONS=1 $(EXTRA_CFLAGS) 
+ifeq ($(TARGET),wasm)
+CFLAGS += --pre-js /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/pre.js 
+endif
 CXXFLAGS := $(CFLAGS) --std=c++11 $(EXTRA_CXXFLAGS)
 LDOPTS := -L/usr/local/lib
 ARFLAGS := -r
