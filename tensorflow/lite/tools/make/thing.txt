@@ -1,0 +1,5 @@
+vdupq_n_f32
+vget_high_u8
+vget_low_u8
+vld1q_f32
+vld1q_u8

@@ -1,0 +1,238 @@
+depthwiseconv_3x3_filter_common.h:inline int32x4_t vdotq_four_lane_s32(int32x4_t acc, int8x16_t lhs,
+depthwiseconv_3x3_filter_common.h:inline int32x4_t vdotq_four_lane_s32(int32x4_t acc, int8x16_t lhs,
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 0);
+pthwiseconv_uint8_transitional.h:          acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_0_a,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_1_a,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_2_a,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_0_b,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_1_b,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_2_b,
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a_shifted,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_a_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_1_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_2_a, input_bank_c_reg,
+depthwiseconv_uint8_transitional.h:              acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc2 = vdotq_four_lane_s32(acc2, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc3 = vdotq_four_lane_s32(acc3, filter_reg_0_a, input_bank_b_reg,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_0_a,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_1_a,
+depthwiseconv_uint8_transitional.h:              acc_a = vdotq_four_lane_s32(acc_a, filter_reg_2_a,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_0_b,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_1_b,
+depthwiseconv_uint8_transitional.h:              acc_b = vdotq_four_lane_s32(acc_b, filter_reg_2_b,
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc0 = vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:          acc1 = vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_a, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_a, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_b_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_c_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_2_a, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_0_a, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc0, filter_reg_1_a, input_bank_a_reg, 2);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_2_b, input_bank_b_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_0_b, input_bank_a_reg, 0);
+depthwiseconv_uint8_transitional.h:                vdotq_four_lane_s32(acc1, filter_reg_1_b, input_bank_a_reg, 2);

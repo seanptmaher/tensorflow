@@ -1,0 +1,936 @@
++ set -e
++++ dirname ./build_wasm_lib.sh
+++ cd .
+++ pwd
++ SCRIPT_DIR=/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make
++ TENSORFLOW_DIR=/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../..
++ make -j 14 TARGET_ARCH=wasm TARGET=wasm -C /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../.. -f tensorflow/lite/tools/make/Makefile
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+In file included from tensorflow/lite/kernels/activations.cc:23:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+In file included from tensorflow/lite/kernels/add.cc:15:
+In file included from ./tensorflow/lite/kernels/internal/optimized/integer_ops/add.h:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+20 errors generated.
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/add.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/add.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+make: *** [tensorflow/lite/tools/make/Makefile:332: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/add.o] Error 1
+make: *** Waiting for unfinished jobs....
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+20 errors generated.
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/batch_matmul.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/batch_matmul.h:19:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/activations.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/activations.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/activations.o] Error 1
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/arg_min_max.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/arg_min_max.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/arg_min_max.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/arg_min_max.o] Error 1
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/audio_spectrogram.cc:19:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/audio_spectrogram.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/audio_spectrogram.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/audio_spectrogram.o] Error 1
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+20 errors generated.
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/batch_matmul.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/batch_matmul.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/batch_matmul.o] Error 1
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/batch_to_space_nd.cc:21:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+In file included from tensorflow/lite/kernels/cast.cc:22:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/batch_to_space_nd.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/batch_to_space_nd.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/batch_to_space_nd.o] Error 1
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:197:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_0 = vreinterpretq_s16_u16(vmovl_u8(vget_low_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:198:25: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16_1 = vreinterpretq_s16_u16(vmovl_u8(vget_high_u8(src_u8)));
+                        ^~~~~~~~~~~~~~~~~~~~~
+                        simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:201:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:202:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:213:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[0] = vsubq_s16(src_s16_0, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:214:19: error: use of undeclared identifier 'vsubq_s16'
+  result.val[1] = vsubq_s16(src_s16_1, zero_point_vec);
+                  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:221:23: error: use of undeclared identifier 'vreinterpretq_s16_u16'; did you mean 'simde_vreinterpretq_s16_u16'?
+  int16x8_t src_s16 = vreinterpretq_s16_u16(vmovl_u8(src_u8));
+                      ^~~~~~~~~~~~~~~~~~~~~
+                      simde_vreinterpretq_s16_u16
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/reinterpret.h:567:1: note: 'simde_vreinterpretq_s16_u16' declared here
+simde_vreinterpretq_s16_u16(simde_uint16x8_t a) {
+^
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:223:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:231:10: error: use of undeclared identifier 'vsubq_s16'
+  return vsubq_s16(src_s16, zero_point_vec);
+         ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:237:27: error: use of undeclared identifier 'vqmovn_s32'
+  const int16x4_t res16 = vqmovn_s32(src);
+                          ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:239:32: error: use of undeclared identifier 'vcombine_s16'
+  uint8x8_t res8 = vqmovun_s16(vcombine_s16(res16, res16));
+                               ^
+20 errors generated.
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: error: unknown type name 'u8'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:34: error: expected ')'
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:241:24: note: to match this '('
+  res8 = vmax_u8(res8, vdup_n_u8(clamp_min));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/cast.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/cast.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: error: unknown type name 'u8'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:45: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                            ^
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:34: error: expected ')'
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                                 ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:242:24: note: to match this '('
+  res8 = vmin_u8(res8, vdup_n_u8(clamp_max));
+                       ^
+/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde/simde/arm/neon/dup_n.h:189:44: note: expanded from macro 'vdup_n_u8'
+  #define vdup_n_u8(value) simde_vdup_n_u8((u8 value))
+                                           ^
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/cast.o] Error 1
+In file included from tensorflow/lite/kernels/ceil.cc:17:
+In file included from ./tensorflow/lite/kernels/internal/optimized/optimized_ops.h:45:
+In file included from ./tensorflow/lite/kernels/cpu_backend_gemm.h:22:
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:244:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 0, res8, 0);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:245:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 1, res8, 1);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:246:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 2, res8, 2);
+  ^
+./tensorflow/lite/kernels/cpu_backend_gemm_custom_gemv.h:247:3: error: use of undeclared identifier 'vst1_lane_u8'
+  vst1_lane_u8(dst + 3, res8, 3);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+em++: error: '/usr/local/google/home/spvw/code/google/code/emsdk/upstream/bin/clang++ -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=1 -D__EMSCRIPTEN_minor__=39 -D__EMSCRIPTEN_tiny__=15 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libcxx -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libcxxabi/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/usr/local/google/home/spvw/.emscripten_cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -O3 -g -fPIC --std=c++11 -DTFLITE_WITHOUT_XNNPACK -I. -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/../../../../../../ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/eigen -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/absl -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/gemmlowp -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/ruy -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/neon_2_sse -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/farmhash/src -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/fp16/include -I/usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/downloads/simde -I-I/usr/local/include -c tensorflow/lite/kernels/ceil.cc -Xclang -isystem/usr/local/google/home/spvw/code/google/code/emsdk/upstream/emscripten/system/include/SDL -c -o /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/ceil.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+make: *** [tensorflow/lite/tools/make/Makefile:331: /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/gen/wasm_wasm/obj/tensorflow/lite/kernels/ceil.o] Error 1

@@ -17,12 +17,26 @@ limitations under the License.
 
 #if defined(__ARM_NEON__) || defined(__ARM_NEON)
 #define USE_NEON
+
+
 #include <arm_neon.h>
+
 #endif
 
 #if defined __GNUC__ && defined __SSE4_1__ && !defined TF_LITE_DISABLE_X86_NEON
 #define USE_NEON
 #include "NEON_2_SSE.h"
+#endif
+
+#if ( defined(__EMSCRIPTEN__) || defined(__wasm_simd128__) ) && !defined(TF_LITE_DISABLE_WASM_NEON)
+#define USE_NEON
+
+
+#define SIMDE_ARM_NEON_A64V8_ENABLE_NATIVE_ALIASES
+#define SIMDE_ARM_NEON_A32V7_ENABLE_NATIVE_ALIASES
+#include <simde/arm/neon.h>
+
+
 #endif
 
 // NEON_OR_PORTABLE(SomeFunc, args) calls NeonSomeFunc(args) if USE_NEON is

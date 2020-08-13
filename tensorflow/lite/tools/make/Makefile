@@ -41,6 +41,7 @@ INCLUDES := \
 -I$(MAKEFILE_DIR)/downloads/farmhash/src \
 -I$(MAKEFILE_DIR)/downloads/flatbuffers/include \
 -I$(MAKEFILE_DIR)/downloads/fp16/include \
+-I$(MAKEFILE_DIR)/downloads/simde \
 -I$(OBJDIR)
 # This is at the end so any globally-installed frameworks like protobuf don't
 # override local versions in the source tree.
@@ -63,8 +64,8 @@ endif
 # There are no rules for compiling objects for the host system (since we don't
 # generate things like the protobuf compiler that require that), so all of
 # these settings are for the target compiler.
-CFLAGS := -O3 -DNDEBUG -fPIC $(EXTRA_CFLAGS) 
-# CFLAGS := -O3 -g -fPIC -s ASSERTIONS=1 $(EXTRA_CFLAGS) 
+# CFLAGS := -O3 -DNDEBUG -fPIC $(EXTRA_CFLAGS) 
+CFLAGS := -O3 -g -fPIC -s ASSERTIONS=1 $(EXTRA_CFLAGS) 
 ifeq ($(TARGET),wasm)
 CFLAGS += --pre-js /usr/local/google/home/spvw/code/google/code/tensorflow/tensorflow/lite/tools/make/pre.js 
 endif

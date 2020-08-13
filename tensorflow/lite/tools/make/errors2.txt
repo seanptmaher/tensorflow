@@ -1,0 +1,4 @@
+/ 'vcombine_s16'
+/ 'vqmovn_s32'
+/ 'vst1_lane_s8'
+/ 'vst1_lane_u8'

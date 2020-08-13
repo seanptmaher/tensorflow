@@ -1,0 +1,50 @@
+/ vaddq 
+/ vaddw 
+/ vbslq
+/ vcagtq
+/ vceqzq
+/ vcgeq
+/ vcgtq
+/ vcltq [check with rosbif]
+/ vcombine
+/ vdotq
+/ vdot_lane
+/ vdup
+/ veorq
+/ vext
+/ vget 
+/ vmax
+/ vmaxq
+/ vmin
+/ vminq
+/ vmla
+/ vmlal
+/ vmlaq
+/ vmull
+/ vmulq
+/ vorrq
+/ vpadalq 
+/ vpadd
+/ vpaddlq
+/ vpaddq
+/ vpmax [this should be trivial to do]
+/ vpmin
+/ vqaddq [these are just normal operations except saturating]
+/ vqdmulhq
+  vqrdmulhq [in a pr]
+  vqrshlq 
+/ vqshlq [in a pr]
+/ vreinterpret 
+/ vreinterpretq
+/ vrhaddq
+/ vrshlq
+/ vrshrq
+/ vshl [double check these with rosbif]
+/ vshlq [this]
+/ vshrn [this]
+/ vsubq
+/ vtq
+/ vtrnq
+/ vuzpq
+/ vzip
+/ vzipq

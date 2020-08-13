@@ -184,6 +184,9 @@ bool CustomGemv(
 // USE_NEON still allows for x86 where we may be using the arm_neon_sse.h
 // wrapper implementing NEON intrinsics on top of SSE4 intrinsics.
 #ifdef USE_NEON
+#define SIMDE_ARM_NEON_A32V7_ENABLE_NATIVE_ALIASES
+#define SIMDE_ARM_NEON_A64V8_ENABLE_NATIVE_ALIASES
+#include <simde/arm/neon.h>
 
 // Some NEON helper functions used by CustomGemvImpl specializations below,
 // allowing for some type genericity in them.
